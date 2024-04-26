@@ -17,20 +17,22 @@ namespace Repositories
             _context = context;
         }
 
+        //Increments the number
         public async Task IncrementNumberAsync()
         {
             var update = Builders<BsonDocument>.Update.Inc("Number", 1);
-            await _context.TasksCollection.UpdateOneAsync(_ => true, update);
+            await _context.TasksCounting.UpdateOneAsync(_ => true, update);
         }
 
+        //Fetches the number from the database.
         public async Task<int> GetNumberAsync()
         {
-            var task = await _context.TasksCollection.Find(_ => true).FirstOrDefaultAsync();
+            var task = await _context.TasksCounting.Find(_ => true).FirstOrDefaultAsync();
             if (task != null && task.Contains("Number"))
             {
                 return task["Number"].AsInt32;
             }
-            return 0; // Return 0 if the "Number" field is not found
+            return -1;
         }
     }
 }

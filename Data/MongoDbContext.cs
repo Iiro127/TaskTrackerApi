@@ -15,7 +15,7 @@ namespace Data
             _database = client.GetDatabase(databaseName);
         }
 
-        public IMongoCollection<BsonDocument> TasksCollection
+        public IMongoCollection<BsonDocument> TasksCounting
         {
             get
             {

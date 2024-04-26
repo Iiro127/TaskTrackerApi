@@ -264,3 +264,4 @@
 /Users/iiro/TaskTrackerApi/bin/Debug/net8.0/runtimes/linux/native/libmongocrypt.so
 /Users/iiro/TaskTrackerApi/bin/Debug/net8.0/runtimes/osx/native/libmongocrypt.dylib
 /Users/iiro/TaskTrackerApi/bin/Debug/net8.0/runtimes/win/native/mongocrypt.dll
+/Users/iiro/TaskTrackerApi/obj/Debug/net8.0/TaskTrackerApi.sourcelink.json
